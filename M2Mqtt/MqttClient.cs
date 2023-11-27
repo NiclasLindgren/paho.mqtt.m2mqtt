@@ -611,6 +611,10 @@ namespace uPLibrary.Networking.M2Mqtt
 
                 this.IsConnected = true;
             }
+            else
+            {
+                Close(); // Force all threads to die
+            }
             return connack.ReturnCode;
         }
 
